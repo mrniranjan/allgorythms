@@ -7,7 +7,7 @@ import (
 
 func main() {
 	n := 2 // 2 rows
-	m := 3 // 3 colums
+	m := 3 // 3 columns
 	m1 := make([][]uint, n, m)
 	for i :=0; i < n; i++ {
 		m1[i] = make([]uint, m)

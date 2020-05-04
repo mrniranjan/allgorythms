@@ -15,13 +15,11 @@ func main() {
 		err := filepath.Walk(filePaths, func(path string, info os.FileInfo, err error) error {
 			if err != nil {
 				fmt.Printf("Something wrong with accessing path %q, %v\n", filePaths, err)
+				return nil
+			} else {
+				fmt.Println("files: ", path)
 			}
-			fmt.Println("files: ", path)
 			return nil
 		})
-		if err != nil {
-			fmt.Println("Something bad happened")
-		}
-		
 	}
 }
